@@ -1,0 +1,537 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                20/Jun/2017  01:46:21
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Exe\GraduationProject.out
+#    Map file     =  
+#        E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\List\GraduationProject.map
+#    Command line =  
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\ADC_PROG.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\cstartup_M.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\DIO_PROG.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\GPRS.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\GPS.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\HeartSensor.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\LcdD.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\main.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\TempSen.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\TIMER_PROG.o"
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj\UART_PROG.o"
+#        -o
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Exe\GraduationProject.out"
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        "E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\List\GraduationProject.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20007fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section             Kind        Address    Size  Object
+  -------             ----        -------    ----  ------
+"A0":                                       0x26c
+  .intvec             const    0x00000000   0x26c  cstartup_M.o [1]
+                             - 0x0000026c   0x26c
+
+"P1":                                      0x47f8
+  .text               ro code  0x0000026c   0xdf4  UART_PROG.o [1]
+  .text               ro code  0x00001060    0x4e  FltToDbl.o [4]
+  .text               ro code  0x000010ae     0xa  xsprout.o [3]
+  .text               ro code  0x000010b8    0xe8  DblAdd.o [4]
+  .text               ro code  0x000011a0    0x58  DblToI32.o [4]
+  .text               ro code  0x000011f8    0x44  strcpy_unaligned.o [5]
+  .text               ro code  0x0000123c   0x180  DblSub.o [4]
+  .text               ro code  0x000013bc   0xdca  xprintffull.o [3]
+  .text               ro code  0x00002186     0x2  cstartup_M.o [1]
+  .text               ro code  0x00002188    0x16  strchr.o [5]
+  .text               ro code  0x0000219e     0x2  cstartup_M.o [1]
+  .text               ro code  0x000021a0    0x36  strlen.o [5]
+  .text               ro code  0x000021d6     0x2  cstartup_M.o [1]
+  .text               ro code  0x000021d8    0x58  memchr.o [5]
+  .text               ro code  0x00002230    0xee  I64DivMod.o [5]
+  .text               ro code  0x0000231e     0x2  cstartup_M.o [1]
+  .text               ro code  0x00002320    0x76  ABImemcpy_unaligned.o [5]
+  .text               ro code  0x00002396    0x44  xdnorm.o [4]
+  .text               ro code  0x000023da     0x2  cstartup_M.o [1]
+  .text               ro code  0x000023dc    0x2e  DblCmpLe.o [4]
+  .text               ro code  0x0000240a     0x2  cstartup_M.o [1]
+  .text               ro code  0x0000240c    0x2e  DblCmpGe.o [4]
+  .text               ro code  0x0000243a     0x2  cstartup_M.o [1]
+  .text               ro code  0x0000243c   0x114  xdscale.o [4]
+  .text               ro code  0x00002550    0x30  I32ToDbl.o [4]
+  .text               ro code  0x00002580   0x1a2  DblMul.o [4]
+  .text               ro code  0x00002722     0x2  cstartup_M.o [1]
+  .text               ro code  0x00002724   0x256  DblDiv.o [4]
+  .text               ro code  0x0000297a     0xe  div.o [3]
+  .text               ro code  0x00002988     0x2  I64DivZer.o [5]
+  .text               ro code  0x0000298a     0x2  cstartup_M.o [1]
+  .text               ro code  0x0000298c   0x644  DIO_PROG.o [1]
+  .text               ro code  0x00002fd0   0x298  ADC_PROG.o [1]
+  .text               ro code  0x00003268   0x27c  main.o [1]
+  .text               ro code  0x000034e4   0x1bc  TIMER_PROG.o [1]
+  .text               ro code  0x000036a0   0x214  LcdD.o [1]
+  .text               ro code  0x000038b4    0x8c  HeartSensor.o [1]
+  .text               ro code  0x00003940    0x2c  TempSen.o [1]
+  .text               ro code  0x0000396c   0x174  GPS.o [1]
+  .text               ro code  0x00003ae0   0x208  GPRS.o [1]
+  .text               ro code  0x00003ce8    0x34  sprintf.o [3]
+  .text               ro code  0x00003d1c    0x10  atof.o [4]
+  .text               ro code  0x00003d2c    0x1c  strcat.o [3]
+  .text               ro code  0x00003d48     0x8  HeartSensor.o [1]
+  .text               ro code  0x00003d50   0x168  xstod.o [4]
+  .text               ro code  0x00003eb8    0x2e  strstr.o [3]
+  .text               ro code  0x00003ee6   0x11e  xstopfx.o [3]
+  .text               ro code  0x00004004   0x1ac  xstoflt.o [3]
+  .text               ro code  0x000041b0    0x2c  copy_init3.o [5]
+  .text               ro code  0x000041e0   0x200  xdtento.o [4]
+  .text               ro code  0x000043e0   0x200  xstoxflt.o [3]
+  .text               ro code  0x000045e0    0x20  DblCmpEq.o [4]
+  .text               ro code  0x00004600    0x52  xdunscal.o [4]
+  .text               ro code  0x00004654     0xc  errno.o [3]
+  .text               ro code  0x00004660     0x2  xtls.o [3]
+  Initializer bytes   const    0x00004664   0x10c  <for P2-1>
+  .text               ro code  0x00004770    0x40  zero_init3.o [5]
+  .text               ro code  0x000047b0    0x28  data_init.o [5]
+  .text               ro code  0x000047d8    0x22  fpinit_M.o [4]
+  .iar.init_table     const    0x000047fc    0x24  - Linker created -
+  .rodata             const    0x00004820    0x20  GPRS.o [1]
+  .rodata             const    0x00004840    0x20  GPRS.o [1]
+  .text               ro code  0x00004860    0x1a  cmain.o [5]
+  .text               ro code  0x0000487a     0x4  low_level_init.o [3]
+  .text               ro code  0x0000487e     0x4  exit.o [3]
+  .text               ro code  0x00004884     0xa  cexit.o [5]
+  .text               ro code  0x00004890    0x14  exit.o [6]
+  .rodata             const    0x000048a4    0x14  GPRS.o [1]
+  .rodata             const    0x000048b8    0x14  GPRS.o [1]
+  .rodata             const    0x000048cc    0x14  GPS.o [1]
+  .rodata             const    0x000048e0    0x14  main.o [1]
+  .rodata             const    0x000048f4    0x10  GPRS.o [1]
+  .rodata             const    0x00004904    0x10  GPRS.o [1]
+  .rodata             const    0x00004914    0x10  GPRS.o [1]
+  .rodata             const    0x00004924    0x10  GPRS.o [1]
+  .rodata             const    0x00004934    0x10  GPRS.o [1]
+  .rodata             const    0x00004944    0x10  GPRS.o [1]
+  .rodata             const    0x00004954    0x10  GPS.o [1]
+  .rodata             const    0x00004964    0x10  GPS.o [1]
+  .rodata             const    0x00004974    0x10  GPS.o [1]
+  .rodata             const    0x00004984    0x10  GPS.o [1]
+  .rodata             const    0x00004994    0x10  GPS.o [1]
+  .rodata             const    0x000049a4    0x10  main.o [1]
+  .text               ro code  0x000049b4    0x10  cstartup_M.o [1]
+  .rodata             const    0x000049c4     0xc  GPRS.o [1]
+  .rodata             const    0x000049d0     0xc  GPRS.o [1]
+  .rodata             const    0x000049dc     0xc  GPRS.o [1]
+  .rodata             const    0x000049e8     0xc  GPRS.o [1]
+  .rodata             const    0x000049f4     0xc  GPRS.o [1]
+  .rodata             const    0x00004a00     0xc  main.o [1]
+  .rodata             const    0x00004a0c     0xc  main.o [1]
+  .rodata             const    0x00004a18     0xc  main.o [1]
+  .rodata             const    0x00004a24     0xc  main.o [1]
+  .rodata             const    0x00004a30     0x8  GPRS.o [1]
+  .rodata             const    0x00004a38     0x8  HeartSensor.o [1]
+  .rodata             const    0x00004a40     0x8  main.o [1]
+  .rodata             const    0x00004a48     0x8  main.o [1]
+  .rodata             const    0x00004a50     0x8  main.o [1]
+  .rodata             const    0x00004a58     0x8  main.o [1]
+  .rodata             const    0x00004a60     0x4  LcdD.o [1]
+  .rodata             const    0x00004a64     0x0  zero_init3.o [5]
+  .rodata             const    0x00004a64     0x0  copy_init3.o [5]
+                             - 0x00004a64  0x47f8
+
+"P2", part 1 of 3:                          0x10c
+  P2-1                         0x20000000   0x109  <Init block>
+    .data             inited   0x20000000    0x68  GPRS.o [1]
+    .data             inited   0x20000068    0x6c  GPRS.o [1]
+    .data             inited   0x200000d4    0x30  UART_PROG.o [1]
+    __DLIB_PERTHREAD  inited   0x20000104     0x4  errno.o [3]
+    .data             inited   0x20000108     0x1  main.o [1]
+                             - 0x20000109   0x109
+
+"P2", part 2 of 3:                         0x1000
+  CSTACK                       0x20000110  0x1000  <Block>
+    CSTACK            uninit   0x20000110  0x1000  <Block tail>
+                             - 0x20001110  0x1000
+
+"P2", part 3 of 3:                          0x5bc
+  .bss                zero     0x20001110   0x258  UART_PROG.o [1]
+  .bss                zero     0x20001368   0x1f4  UART_PROG.o [1]
+  .bss                zero     0x2000155c    0x14  main.o [1]
+  .bss                zero     0x20001570    0x14  main.o [1]
+  .bss                zero     0x20001584    0x14  main.o [1]
+  .bss                zero     0x20001598    0x14  main.o [1]
+  .bss                zero     0x200015ac    0x14  main.o [1]
+  .bss                zero     0x200015c0    0x14  main.o [1]
+  .bss                zero     0x200015d4    0x14  main.o [1]
+  .bss                zero     0x200015e8    0x14  UART_PROG.o [1]
+  .bss                zero     0x200015fc    0x14  UART_PROG.o [1]
+  .bss                zero     0x20001610    0x14  UART_PROG.o [1]
+  .bss                zero     0x20001624    0x14  UART_PROG.o [1]
+  .bss                zero     0x20001638    0x14  UART_PROG.o [1]
+  .bss                zero     0x2000164c    0x14  UART_PROG.o [1]
+  .bss                zero     0x20001660     0xc  HeartSensor.o [1]
+  .bss                zero     0x2000166c     0xc  UART_PROG.o [1]
+  .bss                zero     0x20001678     0x8  main.o [1]
+  .bss                zero     0x20001680     0x8  main.o [1]
+  .bss                zero     0x20001688     0x4  GPRS.o [1]
+  .bss                zero     0x2000168c     0x4  GPS.o [1]
+  .bss                zero     0x20001690     0x4  HeartSensor.o [1]
+  .bss                zero     0x20001694     0x4  HeartSensor.o [1]
+  .bss                zero     0x20001698     0x4  HeartSensor.o [1]
+  .bss                zero     0x2000169c     0x4  main.o [1]
+  .bss                zero     0x200016a0     0x4  TempSen.o [1]
+  .bss                zero     0x200016a4     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016a8     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016ac     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016b0     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016b4     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016b8     0x4  TIMER_PROG.o [1]
+  .bss                zero     0x200016bc     0x1  GPRS.o [1]
+  .bss                zero     0x200016bd     0x1  GPRS.o [1]
+  .bss                zero     0x200016be     0x1  GPS.o [1]
+  .bss                zero     0x200016bf     0x1  GPS.o [1]
+  .bss                zero     0x200016c0     0x1  GPS.o [1]
+  .bss                zero     0x200016c1     0x1  GPS.o [1]
+  .bss                zero     0x200016c2     0x1  GPS.o [1]
+  .bss                zero     0x200016c3     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c4     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c5     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c6     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c7     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c8     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016c9     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016ca     0x1  UART_PROG.o [1]
+  .bss                zero     0x200016cb     0x1  UART_PROG.o [1]
+                             - 0x200016cc   0x5bc
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x5bc:
+          0x20001110  0x5bc
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x10c (101% of destination):
+          0x00004664  0x10c
+    1 destination range, total size 0x109:
+          0x20000000  0x109
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj: [1]
+    ADC_PROG.o                 664
+    DIO_PROG.o               1 604
+    GPRS.o                     520      480      218
+    GPS.o                      372      100        9
+    HeartSensor.o              148        8       24
+    LcdD.o                     532        4
+    TIMER_PROG.o               444                24
+    TempSen.o                   44                 4
+    UART_PROG.o              3 572       48    1 289
+    cstartup_M.o                34      620
+    main.o                     636      117      161
+    ------------------------------------------------
+    Total:                   8 570    1 377    1 729
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    div.o                       14
+    errno.o                     12        4        4
+    exit.o                       4
+    low_level_init.o             4
+    sprintf.o                   52
+    strcat.o                    28
+    strstr.o                    46
+    xprintffull.o            3 530
+    xsprout.o                   10
+    xstoflt.o                  428
+    xstopfx.o                  286
+    xstoxflt.o                 512
+    xtls.o                       2
+    ------------------------------------------------
+    Total:                   4 928        4        4
+
+m7M_tls.a: [4]
+    DblAdd.o                   232
+    DblCmpEq.o                  32
+    DblCmpGe.o                  46
+    DblCmpLe.o                  46
+    DblDiv.o                   598
+    DblMul.o                   418
+    DblSub.o                   384
+    DblToI32.o                  88
+    FltToDbl.o                  78
+    I32ToDbl.o                  48
+    atof.o                      16
+    fpinit_M.o                  34
+    xdnorm.o                    68
+    xdscale.o                  276
+    xdtento.o                  512
+    xdunscal.o                  82
+    xstod.o                    360
+    ------------------------------------------------
+    Total:                   3 318
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o      118
+    I64DivMod.o                238
+    I64DivZer.o                  2
+    cexit.o                     10
+    cmain.o                     26
+    copy_init3.o                44
+    data_init.o                 40
+    memchr.o                    88
+    strchr.o                    22
+    strcpy_unaligned.o          68
+    strlen.o                    54
+    zero_init3.o                64
+    ------------------------------------------------
+    Total:                     774
+
+shb_l.a: [6]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                        10        2
+    Linker created                       41    4 096
+----------------------------------------------------
+    Grand Total:            17 620    1 424    5 829
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x000047fc          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00004820          --   Gb  - Linker created -
+?main                   0x00004861         Code  Gb  cmain.o [5]
+ADC_CONVERT             0x000030a5  0x156  Code  Gb  ADC_PROG.o [1]
+ADC_INIT                0x00002fd1   0xd4  Code  Gb  ADC_PROG.o [1]
+BusFault_Handler        0x0000231f    0x2  Code  Wk  cstartup_M.o [1]
+Buzzer_Alarm            0x00003451   0x24  Code  Gb  main.o [1]
+CSTACK$$Base            0x20000110          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001110          --   Gb  - Linker created -
+DIO_WritePinDir         0x0000298d  0x426  Code  Gb  DIO_PROG.o [1]
+DIO_WritePinVal         0x00002db3  0x16c  Code  Gb  DIO_PROG.o [1]
+Date_Time               0x20001584   0x14  Data  Gb  main.o [1]
+DebugMon_Handler        0x0000243b    0x2  Code  Wk  cstartup_M.o [1]
+Dir                     0x200016bd    0x1  Data  Gb  GPRS.o [1]
+GPRS_INIT               0x00003ae1   0x68  Code  Gb  GPRS.o [1]
+GPS_Close               0x00003a89   0x14  Code  Gb  GPS.o [1]
+GPS_Read                0x00003981  0x108  Code  Gb  GPS.o [1]
+GPS_Start               0x0000396d   0x14  Code  Gb  GPS.o [1]
+GetOrder                0x00003c11   0x76  Code  Gb  GPRS.o [1]
+HBPM                    0x20001660    0xc  Data  Gb  HeartSensor.o [1]
+HardFault_Handler       0x0000219f    0x2  Code  Wk  cstartup_M.o [1]
+HeartSensor_INIT        0x000038b5    0xe  Code  Gb  HeartSensor.o [1]
+Http_INIT               0x00003b49   0x14  Code  Gb  GPRS.o [1]
+Info                    0x2000168c    0x4  Data  Gb  GPS.o [1]
+LCD_COMMAND             0x000036a1   0xac  Code  Gb  LcdD.o [1]
+LCD_DATA                0x0000374d   0xac  Code  Gb  LcdD.o [1]
+LCD_GoToXY              0x0000386b   0x28  Code  Gb  LcdD.o [1]
+LCD_INIT                0x000037f9   0x72  Code  Gb  LcdD.o [1]
+LCD_Print               0x00003899   0x1c  Code  Gb  LcdD.o [1]
+LoadInt                 0x0000195d   0x6e  Code  Lc  xprintffull.o [3]
+MemManage_Handler       0x000021d7    0x2  Code  Wk  cstartup_M.o [1]
+NMI_Handler             0x00002187    0x2  Code  Wk  cstartup_M.o [1]
+NVIC_EnableIRQ          0x000034e5   0x14  Code  Lc  TIMER_PROG.o [1]
+NVIC_EnableIRQ          0x0000026d   0x16  Code  Lc  UART_PROG.o [1]
+Order                   0x20001688    0x4  Data  Gb  GPRS.o [1]
+PendSV_Handler          0x00002723    0x2  Code  Wk  cstartup_M.o [1]
+PeriodicTask            0x200016a4    0x4  Data  Gb  TIMER_PROG.o [1]
+Read_HeartBeats         0x000038c3   0x64  Code  Gb  HeartSensor.o [1]
+ReceiveComplete5        0x200016c8    0x1  Data  Gb  UART_PROG.o [1]
+Region$$Table$$Base     0x000047fc          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00004820          --   Gb  - Linker created -
+SVC_Handler             0x0000240b    0x2  Code  Wk  cstartup_M.o [1]
+Sbuffer                 0x200015ac   0x14  Data  Gb  main.o [1]
+Sclear                  0x200016b4    0x4  Data  Gb  TIMER_PROG.o [1]
+Speed                   0x20001598   0x14  Data  Gb  main.o [1]
+Start_Communication     0x00003b5d   0xb4  Code  Gb  GPRS.o [1]
+SysTick_Handler         0x0000298b    0x2  Code  Wk  cstartup_M.o [1]
+TIMER0A_ISR             0x000035bb   0x6a  Code  Gb  TIMER_PROG.o [1]
+TIMER0_A_INIT           0x000034f9   0x58  Code  Gb  TIMER_PROG.o [1]
+TIMER0_B_INIT           0x00003551   0x46  Code  Gb  TIMER_PROG.o [1]
+TIMER0_Delay_Ms         0x00003597   0x24  Code  Gb  TIMER_PROG.o [1]
+TIMER1A_ISR             0x00003625   0x34  Code  Gb  TIMER_PROG.o [1]
+Tbuffer                 0x200015c0   0x14  Data  Gb  main.o [1]
+Temp                    0x200016a0    0x4  Data  Gb  TempSen.o [1]
+TempSen_INIT            0x00003941    0xc  Code  Gb  TempSen.o [1]
+TempSen_Read            0x0000394d   0x1a  Code  Gb  TempSen.o [1]
+UART                    0x200000d4   0x30  Data  Gb  UART_PROG.o [1]
+UART0_ISR               0x00000c99   0x4e  Code  Gb  UART_PROG.o [1]
+UART1_ISR               0x00000cf1   0x40  Code  Gb  UART_PROG.o [1]
+UART2_ISR               0x00000d39   0x40  Code  Gb  UART_PROG.o [1]
+UART3_ISR               0x00000d81   0x40  Code  Gb  UART_PROG.o [1]
+UART4_ISR               0x00000dc9   0x40  Code  Gb  UART_PROG.o [1]
+UART5_ISR               0x00000e11   0x38  Code  Gb  UART_PROG.o [1]
+UART6_ISR               0x00000e51   0x40  Code  Gb  UART_PROG.o [1]
+UART7_ISR               0x00000ea1   0x40  Code  Gb  UART_PROG.o [1]
+UART_INIT               0x00000285  0x86a  Code  Gb  UART_PROG.o [1]
+UART_READ_STRING        0x00000bf7   0x96  Code  Gb  UART_PROG.o [1]
+UART_TRANSMIT           0x00000aef   0xec  Code  Gb  UART_PROG.o [1]
+UART_WRITE_STRING       0x00000bdb   0x1c  Code  Gb  UART_PROG.o [1]
+Uart0_Receive           0x200015e8   0x14  Data  Gb  UART_PROG.o [1]
+Uart1_Receive           0x200015fc   0x14  Data  Gb  UART_PROG.o [1]
+Uart2_Receive           0x2000166c    0xc  Data  Gb  UART_PROG.o [1]
+Uart3_Receive           0x20001610   0x14  Data  Gb  UART_PROG.o [1]
+Uart4_Receive           0x20001624   0x14  Data  Gb  UART_PROG.o [1]
+Uart5_Receive           0x20001110  0x258  Data  Gb  UART_PROG.o [1]
+Uart6_Receive           0x20001638   0x14  Data  Gb  UART_PROG.o [1]
+Uart7_Receive           0x2000164c   0x14  Data  Gb  UART_PROG.o [1]
+UsageFault_Handler      0x000023db    0x2  Code  Wk  cstartup_M.o [1]
+_GenldFull              0x00001ed5  0x26a  Code  Lc  xprintffull.o [3]
+_LdtobFull              0x00001ad5  0x3fa  Code  Lc  xprintffull.o [3]
+_LitobFull              0x000019cb  0x10a  Code  Lc  xprintffull.o [3]
+_PrintfFull             0x000013bd  0x59a  Code  Gb  xprintffull.o [3]
+_PutcharsFull           0x0000213f   0x2e  Code  Lc  xprintffull.o [3]
+_SProut                 0x000010af    0xa  Code  Gb  xsprout.o [3]
+_Stoflt                 0x00004005  0x1ac  Code  Gb  xstoflt.o [3]
+_Stopfx                 0x00003ee7  0x11e  Code  Gb  xstopfx.o [3]
+_Stoxflt                0x000043e1  0x1cc  Code  Gb  xstoxflt.o [3]
+_Stoxflt::digits        0x000045b0   0x18  Data  Lc  xstoxflt.o [3]
+_Stoxflt::vals          0x000045c8   0x18  Data  Lc  xstoxflt.o [3]
+__aeabi_cdcmpeq         0x000045e1         Code  Gb  DblCmpEq.o [4]
+__aeabi_cdcmple         0x000023dd         Code  Gb  DblCmpLe.o [4]
+__aeabi_cdrcmple        0x0000240d         Code  Gb  DblCmpGe.o [4]
+__aeabi_d2iz            0x000011a1         Code  Gb  DblToI32.o [4]
+__aeabi_d2uiz           0x000011cd         Code  Gb  DblToI32.o [4]
+__aeabi_dadd            0x000010b9         Code  Gb  DblAdd.o [4]
+__aeabi_ddiv            0x00002725         Code  Gb  DblDiv.o [4]
+__aeabi_dmul            0x00002581         Code  Gb  DblMul.o [4]
+__aeabi_dsub            0x0000123d         Code  Gb  DblSub.o [4]
+__aeabi_errno_addr      0x00004655    0x6  Code  Gb  errno.o [3]
+__aeabi_f2d             0x00001061         Code  Gb  FltToDbl.o [4]
+__aeabi_i2d             0x00002551         Code  Gb  I32ToDbl.o [4]
+__aeabi_ldiv0           0x00002989         Code  Gb  I64DivZer.o [5]
+__aeabi_ui2d            0x00002565         Code  Gb  I32ToDbl.o [4]
+__aeabi_uldivmod        0x00002231         Code  Gb  I64DivMod.o [5]
+__cmain                 0x00004861         Code  Gb  cmain.o [5]
+__exit                  0x00004891   0x14  Code  Gb  exit.o [6]
+__iar_Dnorm             0x00002397   0x44  Code  Gb  xdnorm.o [4]
+__iar_Dscale            0x0000243d  0x114  Code  Gb  xdscale.o [4]
+__iar_Dtentox           0x0000423d  0x140  Code  Gb  xdtento.o [4]
+__iar_Dunscale          0x00004601   0x52  Code  Gb  xdunscal.o [4]
+__iar_Errno             0x20000104    0x4  Data  Gb  errno.o [3]
+__iar_Memchr            0x000021d9         Code  Gb  memchr.o [5]
+__iar_Stod              0x00003eb5    0x4  Code  Gb  xstod.o [4]
+__iar_Stodx             0x00003d51  0x14e  Code  Gb  xstod.o [4]
+__iar_Strchr            0x00002189         Code  Gb  strchr.o [5]
+__iar_Strstr            0x00003eb9   0x2e  Code  Gb  strstr.o [3]
+__iar_copy_init3        0x000041b1   0x2c  Code  Gb  copy_init3.o [5]
+__iar_d2uiz             0x000011d9         Code  Gb  DblToI32.o [4]
+__iar_dadd              0x000010cd         Code  Gb  DblAdd.o [4]
+__iar_data_init3        0x000047b1   0x28  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x00004661    0x2  Code  Gb  xtls.o [3]
+__iar_dsub              0x00001251         Code  Gb  DblSub.o [4]
+__iar_dsubStart         0x00001263         Code  Gb  DblSub.o [4]
+__iar_init_vfp          0x000047d9         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x000049b5   0x10  Code  Gb  cstartup_M.o [1]
+__iar_ui2d              0x00002569         Code  Gb  I32ToDbl.o [4]
+__iar_unaligned___aeabi_memcpy
+                        0x00002321         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x00002341         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x00002341         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_strcpy  0x000011f9         Code  Gb  strcpy_unaligned.o [5]
+__iar_vfp_atof          0x00003d1d   0x10  Code  Gb  atof.o [4]
+__iar_zero_init3        0x00004771   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x0000487b    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x26c  Data  Gb  cstartup_M.o [1]
+_call_main              0x0000486d         Code  Gb  cmain.o [5]
+_exit                   0x00004885         Code  Gb  cexit.o [5]
+_main                   0x00004877         Code  Gb  cmain.o [5]
+arr                     0x200015d4   0x14  Data  Gb  main.o [1]
+arrBack                 0x20001368  0x1f4  Data  Gb  UART_PROG.o [1]
+div                     0x0000297b    0xe  Code  Gb  div.o [3]
+dmul                    0x000041e1   0x5a  Code  Lc  xdtento.o [4]
+exit                    0x0000487f    0x4  Code  Gb  exit.o [3]
+flag                    0x200016b8    0x4  Data  Gb  TIMER_PROG.o [1]
+flagGps                 0x200016be    0x1  Data  Gb  GPS.o [1]
+g_com_port              0x20000108    0x1  Data  Gb  main.o [1]
+getDir                  0x20000068   0x6c  Data  Lc  GPRS.o [1]
+hour                    0x200016b0    0x4  Data  Gb  TIMER_PROG.o [1]
+i                       0x20001694    0x4  Data  Gb  HeartSensor.o [1]
+i0                      0x200016c3    0x1  Data  Gb  UART_PROG.o [1]
+i1                      0x200016c4    0x1  Data  Gb  UART_PROG.o [1]
+i2                      0x200016c5    0x1  Data  Gb  UART_PROG.o [1]
+i3                      0x200016c6    0x1  Data  Gb  UART_PROG.o [1]
+i4                      0x200016c7    0x1  Data  Gb  UART_PROG.o [1]
+i5                      0x200016c9    0x1  Data  Gb  UART_PROG.o [1]
+i6                      0x200016ca    0x1  Data  Gb  UART_PROG.o [1]
+i7                      0x200016cb    0x1  Data  Gb  UART_PROG.o [1]
+information             0x20001698    0x4  Data  Gb  HeartSensor.o [1]
+initDate                0x200016bf    0x1  Data  Gb  GPS.o [1]
+initLat                 0x200016c0    0x1  Data  Gb  GPS.o [1]
+initLong                0x200016c1    0x1  Data  Gb  GPS.o [1]
+initSpeed               0x200016c2    0x1  Data  Gb  GPS.o [1]
+latitude_data           0x2000155c   0x14  Data  Gb  main.o [1]
+longitude_data          0x20001570   0x14  Data  Gb  main.o [1]
+main                    0x00003269  0x1e8  Code  Gb  main.o [1]
+memchr                  0x000021d9         Code  Gb  memchr.o [5]
+min                     0x200016ac    0x4  Data  Gb  TIMER_PROG.o [1]
+pows                    0x00004398   0x48  Data  Lc  xdtento.o [4]
+receiving               0x20001690    0x4  Data  Gb  HeartSensor.o [1]
+s                       0x20001680    0x8  Data  Gb  main.o [1]
+second                  0x200016a8    0x4  Data  Gb  TIMER_PROG.o [1]
+sprintf                 0x00003ce9   0x34  Code  Gb  sprintf.o [3]
+state                   0x200016bc    0x1  Data  Gb  GPRS.o [1]
+strcat                  0x00003d2d   0x1c  Code  Gb  strcat.o [3]
+strchr                  0x00002189         Code  Gb  strchr.o [5]
+strlen                  0x000021a1         Code  Gb  strlen.o [5]
+strstr                  0x00003d49    0x8  Code  Gb  HeartSensor.o [1]
+temperature             0x2000169c    0x4  Data  Gb  main.o [1]
+val                     0x20001678    0x8  Data  Gb  main.o [1]
+weblink2                0x20000000   0x68  Data  Lc  GPRS.o [1]
+
+
+[1] = E:\(S.F.E)-books\4th-year-communication\GraduationProject\GraduationProject\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  17 620 bytes of readonly  code memory
+   1 424 bytes of readonly  data memory
+   5 829 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
